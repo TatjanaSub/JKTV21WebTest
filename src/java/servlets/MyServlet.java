@@ -25,12 +25,15 @@ public class MyServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         switch (request.getServletPath()){
             case "/page1":
+                request.setAttribute("info", "Эта страница передана из кода Java!");
                 request.getRequestDispatcher("/WEB-INF/page1.html").forward(request, response);
                 break;
             case "/page2":
+                request.setAttribute("info", "Эта страница передана из кода Java!");
                 request.getRequestDispatcher("/page2.html").forward(request, response);
                 break;
             case "/page3":
+                request.setAttribute("info", "Эта страница передана из кода Java!");
                 request.getRequestDispatcher("/WEB-INF/page3.html").forward(request, response);
                 break;
             case "/MyServlet":
@@ -50,7 +53,7 @@ public class MyServlet extends HttpServlet {
                 }
                 break;
             case "/pageJsp2":
-                request.setAttribute("info", "Эта страница передана из кода");
+                request.setAttribute("info", "Эта страница передана из кода Java!");
                 request.getRequestDispatcher("/WEB-INF/pageJsp2.jsp").forward(request, response);
                 break;
             default:

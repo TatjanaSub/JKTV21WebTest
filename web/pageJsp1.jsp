@@ -6,8 +6,7 @@
         <title>JSP Page1</title>
     </head>
     <body>
-        <h1>JSP страница 1</h1>
-    <center><h1>JSP страница 1</h1></center>
-    
+        <center><h1>JSP страница 1</h1></center>
+        <center>${info}</center>
     </body>
 </html>
