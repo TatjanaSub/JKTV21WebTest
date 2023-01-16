@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author pupil
  */
-@WebServlet(name = "MyServlet", urlPatterns = {"/MyServlet","/page1","/page2","/page3","/pageJsp2"})
+@WebServlet(name = "MyServlet", urlPatterns = {"/MyServlet","/page1","/page2","/page3","/pageJsp2","/pageJsp1"})
 public class MyServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -55,6 +55,10 @@ public class MyServlet extends HttpServlet {
             case "/pageJsp2":
                 request.setAttribute("info", "Эта страница передана из кода Java!");
                 request.getRequestDispatcher("/WEB-INF/pageJsp2.jsp").forward(request, response);
+                break;
+            case "/pageJsp1":
+                request.setAttribute("info", "Эта страница передана из кода Java!");
+                request.getRequestDispatcher("/pageJsp1.jsp").forward(request, response);
                 break;
             default:
                 throw new AssertionError();
